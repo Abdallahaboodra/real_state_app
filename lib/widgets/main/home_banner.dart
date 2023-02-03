@@ -35,19 +35,19 @@ class HomeBanner extends StatelessWidget {
                     .headline3!
                     .copyWith(color: Colors.white, fontWeight: FontWeight.bold),
               ),
-              SizedBox(
+              const SizedBox(
                 height: kDefaultPadding,
               ),
               ElevatedButton(
                 style: TextButton.styleFrom(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     vertical: kDefaultPadding,
                     horizontal: kDefaultPadding * 2,
                   ),
                   backgroundColor: kPrimaryColor,
                 ),
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   'Contact us',
                   style: TextStyle(
                     color: kDarkColor,
