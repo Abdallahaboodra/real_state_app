@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rael_state_app/constants.dart';
 import 'package:rael_state_app/screens/home_screen.dart';
+import 'package:rael_state_app/widgets/main/main_section.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
               bodyText2: const TextStyle(color: kBodyTextColor),
             ),
       ),
-      home: const HomeScreen(),
+      home: MainSection(),
     );
   }
 }
