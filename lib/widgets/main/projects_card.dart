@@ -16,7 +16,7 @@ class ProjectsCard extends StatelessWidget {
       padding: const EdgeInsets.all(
         kDefaultPadding,
       ),
-      color: Colors.blueGrey,
+      color: kSecondaryColor,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
