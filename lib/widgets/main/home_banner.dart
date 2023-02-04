@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:rael_state_app/constants.dart';
+import 'package:rael_state_app/responsive.dart';
 
 class HomeBanner extends StatelessWidget {
   const HomeBanner({super.key});
@@ -9,7 +10,7 @@ class HomeBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 1.7,
+      aspectRatio: Responsive.isMobile(context) ? 1 : 1.7,
       child: Stack(fit: StackFit.expand, children: [
         Image.asset(
           'assets/images/background.jpg',
@@ -28,13 +29,17 @@ class HomeBanner extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'Bulid Agreat Future \n for all of us!',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline3!
-                    .copyWith(color: Colors.white, fontWeight: FontWeight.bold),
-              ),
+              Responsive.isDesctop(context)
+                  ? Text(
+                      'Bulid Agreat Future \n for all of us!',
+                      style: Theme.of(context).textTheme.headline3!.copyWith(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    )
+                  : Text(
+                      'Bulid Agreat Future \n for all of us!',
+                      style: Theme.of(context).textTheme.headline5!.copyWith(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
               const SizedBox(
                 height: kDefaultPadding,
               ),
